@@ -1,6 +1,7 @@
 "use client"
 
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useState } from 'react';
 import {
   Collapse,
@@ -35,17 +36,34 @@ const Navigation = () => {
           <Collapse isOpen={isOpen} navbar>
             <Nav className="ms-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">Home</NavLink>
+                <Link href="/" className='nav-link' passHref>
+                  Home
+                </Link>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
                   Model
                 </DropdownToggle>
                 <DropdownMenu right>
-                  <DropdownItem>Option 1</DropdownItem>
-                  <DropdownItem>Option 2</DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>Reset</DropdownItem>
+                  <Link href='/model/BRZ' style={{textDecoration: 'none'}} passHref>
+                    <DropdownItem>BRZ</DropdownItem>
+                  </Link>
+
+                  <Link href='/model/CROSSTREK' style={{textDecoration: 'none'}} passHref>
+                    <DropdownItem>CROSSTREK</DropdownItem>
+                  </Link>
+                  
+                  <Link href='/model/FORESTER' style={{textDecoration: 'none'}} passHref>
+                    <DropdownItem>FORESTER</DropdownItem>
+                  </Link>
+                  
+                  <Link href='/model/WRX' style={{textDecoration: 'none'}} passHref>
+                    <DropdownItem>WRX</DropdownItem>
+                  </Link>
+            
+                  <Link href='/model/WRXWAGON' style={{textDecoration: 'none'}} passHref>
+                    <DropdownItem>WRX WAGON</DropdownItem>
+                  </Link>
                 </DropdownMenu>
               </UncontrolledDropdown>
               <NavItem>
