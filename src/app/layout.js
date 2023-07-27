@@ -2,6 +2,7 @@ import './globals.css'
 import 'typeface-roboto';
 
 import Navbar from './components/Navbar/Navbar.component';
+import Footer from './components/Footer/Footer.component';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -15,7 +16,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Navbar />
-        {children}
+        <div className='main-container'>
+          {children}
+        </div>
+        <Footer />
       </body>
     </html>
   )

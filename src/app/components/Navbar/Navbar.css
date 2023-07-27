@@ -1,0 +1,8 @@
+.custom-color {
+    background-color: #1d74bb;
+    color: #ffffff;
+}
+
+.custom-color .nav-link {
+    color: #ffffff;
+}
