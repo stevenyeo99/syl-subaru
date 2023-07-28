@@ -49,7 +49,7 @@ const Footer = () => {
                         <br />
 
                         <div className='ms-auto me-auto w-75' id='plaza-icon'>
-                            <Image src='/footer-logo.png' alt='subaru plaza' width='350' height={110}/>
+                            <Image src='/footer-logo.png' alt='subaru plaza' width='300' height={110}/>
                         </div>
                     </div>
                 </div>

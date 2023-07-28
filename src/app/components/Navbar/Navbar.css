@@ -6,3 +6,9 @@
 .custom-color .nav-link {
     color: #ffffff;
 }
+
+@media screen and (max-width: 767px) {
+    a {
+        text-align: center;
+    }
+}

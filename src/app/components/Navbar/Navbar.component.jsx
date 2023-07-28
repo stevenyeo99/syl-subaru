@@ -29,7 +29,7 @@ const Navigation = () => {
     <div>
       <Navbar expand='md' light className='custom-color'>
           <NavbarBrand href="/">
-            <Image src='/logo.png' alt='Subaru Logo' width={200} height={120}/>
+            <Image src='/logo.png' alt='Subaru Logo' width={150} height={100}/>
           </NavbarBrand>
           
           <NavbarToggler onClick={toggle} />

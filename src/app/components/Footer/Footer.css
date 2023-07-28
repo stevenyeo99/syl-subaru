@@ -18,4 +18,8 @@ footer {
         max-height: 80px;
         max-width: 100%;
     }
+
+    #profile-pic img {
+        width: 50%;
+    }
 }
