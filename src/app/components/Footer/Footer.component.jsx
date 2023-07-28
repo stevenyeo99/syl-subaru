@@ -11,7 +11,7 @@ const Footer = () => {
         <footer className='p-5 pb-3'>
             <div className='container'>
                 <div className="row">
-                    <div className='col-lg-4 col-12'>
+                    <div className='col-lg-4 col-12' id='profile-pic'>
                         <Image src='/sylvester.jpeg' alt='Sylvester' width={200} height={200} className="rounded" />
                     </div>
 
