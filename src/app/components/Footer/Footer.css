@@ -8,4 +8,9 @@ footer {
     .row div {
         text-align: center;
     }
+
+    #plaza-icon img {
+        max-height: 80px;
+        max-width: 100%;
+    }
 }

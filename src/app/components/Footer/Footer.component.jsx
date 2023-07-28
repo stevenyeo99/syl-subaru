@@ -8,7 +8,7 @@ import './Footer.css';
 
 const Footer = () => {
     return (
-        <footer className='p-5 pb-2'>
+        <footer className='p-5 pb-3'>
             <div className='container'>
                 <div className="row">
                     <div className='col-lg-4 col-12'>
@@ -48,7 +48,7 @@ const Footer = () => {
                         </div>
                         <br />
 
-                        <div className='ms-auto me-auto w-75'>
+                        <div className='ms-auto me-auto w-75' id='plaza-icon'>
                             <Image src='/footer-logo.png' alt='subaru plaza' width='350' height={110}/>
                         </div>
                     </div>
@@ -56,8 +56,9 @@ const Footer = () => {
             </div>
                 
             <hr />
+
             <div className="text-center">
-                2023 - Plaza Subaru Batam
+                {new Date().getFullYear()} - Plaza Subaru Batam
             </div>
         </footer>
     );
