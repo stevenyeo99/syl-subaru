@@ -3,3 +3,9 @@ footer {
     background-color: #1d74bb;
     color: #ffffff;
 }
+
+@media screen and (max-width: 991px) {
+    .row div {
+        text-align: center;
+    }
+}

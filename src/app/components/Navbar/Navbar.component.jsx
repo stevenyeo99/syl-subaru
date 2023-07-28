@@ -28,7 +28,7 @@ const Navigation = () => {
   return (
     <div>
       <Navbar expand='md' light className='custom-color'>
-          <NavbarBrand href="/" className='my-2'>
+          <NavbarBrand href="/">
             <Image src='/logo.png' alt='Subaru Logo' width={200} height={120}/>
           </NavbarBrand>
           

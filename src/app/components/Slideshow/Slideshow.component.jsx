@@ -10,6 +10,8 @@ import {
   CarouselCaption,
 } from 'reactstrap';
 
+import './Slideshow.css';
+
 const items = [
   {
     src: '/slidebar/1.jpg',
