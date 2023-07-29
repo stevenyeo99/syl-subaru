@@ -1,7 +1,8 @@
 .anotherActionLink {
-  transition: border-color 0.3 ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .anotherActionLink:hover {
-  border-color: aqua;
+  border-color: #0dcaf0 !important;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3) !important;
 }

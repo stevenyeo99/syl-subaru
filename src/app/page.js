@@ -23,9 +23,9 @@ export default function Home() {
       </section>
 
       <section id='anotherAction' className='row mt-5'>
-        <div class='col-sm-12 col-md-12 col-lg-6'>
-          <Link href='' className='text-decoration-none' >
-            <div className='border border-light border-secondary rounded p-3 shadow-sm'>
+        <div className='col-sm-12 col-md-12 col-lg-6'>
+          <Link href='/model/all' className='text-decoration-none'>
+            <div className={`border border-light border-secondary rounded p-3 shadow-sm ${styles.anotherActionLink}`}>
               <div className='container'>
                 <div className='row'>
                   <div className='col-12 p-0'>
@@ -34,7 +34,7 @@ export default function Home() {
                 </div>
                 
                 <div className='row'>
-                  <div className='col-xs-2 col-1 text-white bg-secondary text-center rounded d-flex align-items-center'>
+                  <div className='col-xs-2 col-1 text-info text-center rounded d-flex align-items-center'>
                     <FontAwesomeIcon icon={faCar} style={{width: '24px', height: '24px'}} />
                   </div>
 
@@ -47,9 +47,9 @@ export default function Home() {
           </Link>
         </div>
 
-        <div class='col-sm-12 col-md-12 col-lg-6'>
-          <Link href='' className='text-decoration-none anotherActionLink'>
-            <div className='border border-light border-secondary rounded p-3 shadow-sm'>
+        <div className='col-sm-12 col-md-12 col-lg-6'>
+          <Link href='/pricelist' className='text-decoration-none anotherActionLink'>
+            <div div className={`border border-light border-secondary rounded p-3 shadow-sm ${styles.anotherActionLink}`}>
               <div className='container'>
                 <div className='row'>
                   <div className='col-12 p-0'>
@@ -58,7 +58,7 @@ export default function Home() {
                 </div>
                 
                 <div className='row'>
-                  <div className='col-xs-2 col-1 text-white bg-secondary text-center rounded d-flex align-items-center'>
+                  <div className='col-xs-2 col-1 text-info text-center rounded d-flex align-items-center'>
                     <FontAwesomeIcon icon={faTag} style={{width: '24px', height: '24px'}} />
                   </div>
 

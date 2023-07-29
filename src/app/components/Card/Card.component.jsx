@@ -41,7 +41,7 @@ const CardItem = (props) => {
                                         className="mb-2 text-muted"
                                         tag="h6"
                                     >
-                                        Card subtitle
+                                        {caption.date} <b>|</b> {caption.type}
                                     </CardSubtitle>
                                     <CardText>
                                         {caption.description}

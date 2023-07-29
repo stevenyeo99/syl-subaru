@@ -36,7 +36,7 @@ const Navigation = () => {
           <Collapse isOpen={isOpen} navbar>
             <Nav className="ms-auto" navbar>
               <NavItem>
-                <Link href="/" className='nav-link' passHref>
+                <Link href="/" className='nav-link'>
                   Home
                 </Link>
               </NavItem>
@@ -44,25 +44,31 @@ const Navigation = () => {
                 <DropdownToggle nav caret>
                   Model
                 </DropdownToggle>
-                <DropdownMenu right>
-                  <Link href='/model/BRZ' style={{textDecoration: 'none'}} passHref>
+                <DropdownMenu>
+                  <Link href='/model/BRZ' style={{textDecoration: 'none'}}>
                     <DropdownItem>BRZ</DropdownItem>
                   </Link>
 
-                  <Link href='/model/CROSSTREK' style={{textDecoration: 'none'}} passHref>
+                  <Link href='/model/CROSSTREK' style={{textDecoration: 'none'}}>
                     <DropdownItem>CROSSTREK</DropdownItem>
                   </Link>
                   
-                  <Link href='/model/FORESTER' style={{textDecoration: 'none'}} passHref>
+                  <Link href='/model/FORESTER' style={{textDecoration: 'none'}}>
                     <DropdownItem>FORESTER</DropdownItem>
                   </Link>
                   
-                  <Link href='/model/WRX' style={{textDecoration: 'none'}} passHref>
+                  <Link href='/model/WRX' style={{textDecoration: 'none'}}>
                     <DropdownItem>WRX</DropdownItem>
                   </Link>
             
-                  <Link href='/model/WRXWAGON' style={{textDecoration: 'none'}} passHref>
+                  <Link href='/model/WRX_WAGON' style={{textDecoration: 'none'}}>
                     <DropdownItem>WRX WAGON</DropdownItem>
+                  </Link>
+
+                  <DropdownItem divider />
+
+                  <Link href='/model/all' style={{textDecoration: 'none'}}>
+                    <DropdownItem>Semua</DropdownItem>
                   </Link>
                 </DropdownMenu>
               </UncontrolledDropdown>
