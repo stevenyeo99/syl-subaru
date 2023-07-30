@@ -6,6 +6,7 @@ import { Fragment } from "react";
 
 import ModelItem from "@/app/components/Model/ModelItem";
 import ModelList from "@/app/components/Model/ModelList";
+import NewsBarLayout from "@/layouts/newsBarLayout";
 
 const Model = () => {
     const router = useRouter();
@@ -14,8 +15,11 @@ const Model = () => {
     const lowerCaseQueryParam = model?.toLowerCase();
     return (
         <Fragment>
+            <Head>
+                <title>{`${lowerCaseQueryParam ==='all' ? 'Semua Model Mobil' : `Model | ${model} `}`}</title>
+            </Head>
             {
-                lowerCaseQueryParam === 'all' ? <ModelList /> : <ModelItem />
+                lowerCaseQueryParam === 'all' ? <ModelList /> : <NewsBarLayout><ModelItem model={lowerCaseQueryParam} /></NewsBarLayout>
             }
         </Fragment>
     );
