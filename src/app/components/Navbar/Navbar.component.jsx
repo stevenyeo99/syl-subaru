@@ -15,7 +15,6 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  NavbarText,
 } from 'reactstrap';
 
 import './Navbar.css';
@@ -29,7 +28,9 @@ const Navigation = () => {
     <div>
       <Navbar expand='md' light className='custom-color'>
           <NavbarBrand href="/">
-            <Image src='/logo.png' alt='Subaru Logo' width={150} height={100}/>
+            <h1 className='m-0'>
+              <Image src='/logo.png' alt='Subaru Logo' width={150} height={100}/>
+            </h1>
           </NavbarBrand>
           
           <NavbarToggler onClick={toggle} />
@@ -76,7 +77,7 @@ const Navigation = () => {
                 <NavLink href='/'>Pricelist</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href='/'>Promo & News</NavLink>
+                <NavLink href='/news/all'>Promo & News</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href='/'>Testimoni</NavLink>

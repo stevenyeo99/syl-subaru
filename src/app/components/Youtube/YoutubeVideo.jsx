@@ -4,7 +4,7 @@ const opts = {
     height: "420",
     width: "100%",
     playerVars: {
-        autoplay: 1
+        autoplay: 0
     }
 };
 

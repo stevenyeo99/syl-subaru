@@ -16,10 +16,10 @@ const Model = () => {
     return (
         <Fragment>
             <Head>
-                <title>{`${lowerCaseQueryParam ==='all' ? 'Semua Model Mobil' : `Model | ${model} `}`}</title>
+                <title>{`${lowerCaseQueryParam ==='all' ? 'Semua Model Mobil' : `Model | ${model.replace('_', ' ')} `}`}</title>
             </Head>
             {
-                lowerCaseQueryParam === 'all' ? <ModelList /> : <NewsBarLayout><ModelItem model={lowerCaseQueryParam} /></NewsBarLayout>
+                lowerCaseQueryParam === 'all' ? <ModelList /> : <NewsBarLayout type={'model'} activeClass={lowerCaseQueryParam}><ModelItem model={lowerCaseQueryParam} /></NewsBarLayout>
             }
         </Fragment>
     );

@@ -29,7 +29,7 @@ export default function Home() {
               <div className='container'>
                 <div className='row'>
                   <div className='col-12 p-0'>
-                    <h4 className='text-info'>Lihat Semua Model</h4>
+                    <h2 className='text-info h4'>Lihat Semua Model</h2>
                   </div>
                 </div>
                 
@@ -53,7 +53,7 @@ export default function Home() {
               <div className='container'>
                 <div className='row'>
                   <div className='col-12 p-0'>
-                    <h4 className='text-info'>Pricelist Terbaru</h4>
+                    <h2 className='text-info h4'>Pricelist Terbaru</h2>
                   </div>
                 </div>
                 
