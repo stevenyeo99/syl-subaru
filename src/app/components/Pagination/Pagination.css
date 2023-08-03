@@ -1,0 +1,45 @@
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Pagination component */
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Pagination item */
+.pagination li {
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+/* Pagination item - Previous and Next buttons */
+.pagination li.previous,
+.pagination li.next {
+  font-weight: bold;
+}
+
+/* Pagination item - Active page */
+.pagination li.active {
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 20%;
+  padding: 5px 10px;
+}
+
+/* Pagination item - Dots */
+.pagination li.break-me {
+  margin: 0 5px;
+}
+
+/* Pagination item - Disabled page */
+.pagination li.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

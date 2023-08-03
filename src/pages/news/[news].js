@@ -24,6 +24,8 @@ const News = () => {
         return isValiddata;
     });
 
+    const latestListOfNews = ListOfNews.sort((a, b) => b - a);
+
     return (
         <Fragment>
             <Head>
@@ -37,7 +39,7 @@ const News = () => {
             <NewsBarLayout type='news'>
                 {
                     (lowerCaseQueryParam === 'all' || isNaN(lowerCaseQueryParam)) ? (
-                        <NewsList />
+                        <NewsList items={latestListOfNews} />
                     ) : (
                         <NewsItem item={newDetail} />
                     )
