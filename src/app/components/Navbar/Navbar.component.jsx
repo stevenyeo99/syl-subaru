@@ -74,20 +74,20 @@ const Navigation = () => {
                 </DropdownMenu>
               </UncontrolledDropdown>
               <NavItem>
-                <NavLink href='/'>Pricelist</NavLink>
+                <NavLink href='/pricelist'>Pricelist</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href='/news/all'>Promo & News</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href='/'>Testimoni</NavLink>
+                <NavLink href='/testimoni'>Testimoni</NavLink>
               </NavItem>
-              <NavItem>
+              {/* <NavItem>
                 <NavLink href='/'>About Us</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href='/'>Contact Us</NavLink>
-              </NavItem>
+              </NavItem> */}
             </Nav>
           </Collapse>
       </Navbar>

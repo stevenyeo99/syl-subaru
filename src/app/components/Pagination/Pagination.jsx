@@ -7,7 +7,7 @@ import './Pagination.css';
 
 const Pagination = (props) => {
 
-    const {data} = props;
+    const {data, isDisplay} = props;
 
     const [currentPage, setCurrentPage] = useState(0);
 
@@ -26,22 +26,27 @@ const Pagination = (props) => {
                 currentPageData
             }
 
-            <ReactPaginate
-                breakLabel={'...'}
-                previousLabel={"← Previous"}
-                nextLabel={"Next →"}
-                breakClassName={'break-me'}
-                pageCount={pageCount}
-                onPageChange={handlePageClick}
-                containerClassName={"pagination"}
-                previousLinkClassName={"pagination__link"}
-                nextLinkClassName={"pagination__link"}
-                disabledClassName={"pagination__link--disabled"}
-                subContainerClassName={'pages pagination'}
-                activeClassName={"active"}
-                marginPagesDisplayed={2}
-                pageRangeDisplayed={5}
-            />
+            {
+                isDisplay && (
+                    <ReactPaginate
+                        breakLabel={'...'}
+                        previousLabel={"← Previous"}
+                        nextLabel={"Next →"}
+                        breakClassName={'break-me'}
+                        pageCount={pageCount}
+                        onPageChange={handlePageClick}
+                        containerClassName={"pagination"}
+                        previousLinkClassName={"pagination__link"}
+                        nextLinkClassName={"pagination__link"}
+                        disabledClassName={"pagination__link--disabled"}
+                        subContainerClassName={'pages pagination'}
+                        activeClassName={"active"}
+                        marginPagesDisplayed={2}
+                        pageRangeDisplayed={5}
+                    />
+                )
+            }
+            
         </Fragment>
     );
 };

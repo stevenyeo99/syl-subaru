@@ -5,14 +5,17 @@ import Pagination from "../Pagination/Pagination";
 const NewsList = (props) => {
     const {listType, items} = props;
 
+    console.log('test: ' + listType);
+
     return (
         <section className='container'>
             <h1 className='text-primary'>{listType ? listType : 'Info Terkini'}</h1>
             <hr />
-            { !items && <h2 className='text-secondary'>Info tidak ditemukan.</h2>}
+            { !items.length && <h2 className='text-secondary'>Info tidak ditemukan.</h2>}
             {
                 items && (
-                    <Pagination 
+                    <Pagination
+                        isDisplay={items.length ? true : false} 
                         data={
                             items.map(item => {
                                 let paragraph = item.paragraphs.find(paragraph => {

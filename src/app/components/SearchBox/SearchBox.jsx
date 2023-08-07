@@ -2,17 +2,15 @@ import { InputGroup, Input, Button } from "reactstrap";
 
 const SearchBox = (props) => {
 
-    const { type, placeholder } = props;
+    const { type, placeholder, onChangeHandler } = props;
 
     return (
         <InputGroup>
             <Input
                 type={type}
                 placeholder={placeholder}
-                onChange={() => {}}
+                onChange={onChangeHandler}
             />
-
-            <Button color="primary" onClick={() => {}}>Search</Button>
         </InputGroup>
     );
 };

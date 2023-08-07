@@ -31,15 +31,15 @@ const NewsItem = (props) => {
 
             <div className='mt-3'>
                 {
-                    paragraphs.map(content => {
+                    paragraphs.map((content, index) => {
 
                         const {format, values} = content;
                         let contentDisp;
                         if (format === 'text') {
-                            contentDisp = <p className='text-dark'>{values}</p>
+                            contentDisp = <p key={index} className='text-dark'>{values}</p>
                         } else if (format === 'unit') {
                             contentDisp = (
-                                <ul>
+                                <ul key={index}>
                                     {
                                         values.map(value => {
                                             return <li key={value}>{value}</li>
@@ -49,7 +49,7 @@ const NewsItem = (props) => {
                             )
                         } else if (format === 'onit') {
                             contentDisp = (
-                                <ol>
+                                <ol key={index}>
                                     {
                                         values.map(value => {
                                             return <li key={value}>{value}</li>
@@ -59,11 +59,11 @@ const NewsItem = (props) => {
                             )
                         } else if (format === 'image') {
                             contentDisp = (
-                                <img src={values} alt={title} style={{width: '100%'}} />
+                                <img key={index} src={values} alt={title} style={{width: '100%'}} />
                             )
                         } else if (format === 'image-unit') {
                             contentDisp = (
-                                <div className='container'>
+                                <div className='container' key={index}>
                                     <div className='row'>
                                         {
                                             values.map(value => {
@@ -77,7 +77,7 @@ const NewsItem = (props) => {
                             )
                         } else if (format === 'video') {
                             contentDisp = (
-                                <YoutubeVideo videoId={values}/>
+                                <YoutubeVideo videoId={values} key={index}/>
                             )
                         }
 

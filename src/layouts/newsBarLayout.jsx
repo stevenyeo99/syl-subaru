@@ -7,7 +7,7 @@ import './newsBarLayout.css';
 import { Fragment } from "react";
 import SearchBox from "@/app/components/SearchBox/SearchBox";
 
-const NewsBarLayout = ({children, type, activeClass}) => {
+const NewsBarLayout = ({children, type, activeClass, onChangeHandler, isDisplayList}) => {
 
     const latestTenNews = ListOfNews.sort((a, b) => b.date - a.date).slice(0, 10);
 
@@ -52,33 +52,41 @@ const NewsBarLayout = ({children, type, activeClass}) => {
                 {
                     type === 'news' && (
                         <Fragment>
-                            <section className='container w-100 mb-5'>
-                                <SearchBox type='text' placeholder='Pencarian..' />
-                            </section>
-
+                            {
+                                isDisplayList && (
+                                    <section className='container w-100 mb-5'>
+                                        <SearchBox type='text' placeholder='Pencarian..' onChangeHandler={onChangeHandler} />
+                                    </section>
+                                )
+                            }
+                            
                             <section className='container w-100 mb-5'>
                                 <strong className='h5 text-uppercase'>Kategori</strong>
                                 <hr />
                                 
                                 <ButtonGroup vertical className='w-100'>
-                                    <Link href='/news/artikel' className={`text-uppercase btn btn-secondary ${activeClass === 'brz' ? 'active' : ''}`}>
+                                    <Link href='/news/artikel' className={`text-uppercase btn btn-secondary ${activeClass === 'artikel' ? 'active' : ''}`}>
                                         Artikel
                                     </Link>
 
-                                    <Link href='/news/berita' className={`text-uppercase btn btn-secondary ${activeClass === 'crosstrek' ? 'active' : ''}`}>
+                                    <Link href='/news/berita' className={`text-uppercase btn btn-secondary ${activeClass === 'berita' ? 'active' : ''}`}>
                                         Berita
                                     </Link>
 
-                                    <Link href='/news/liputan_media' className={`text-uppercase btn btn-secondary ${activeClass === 'forester' ? 'active' : ''}`}>
+                                    <Link href='/news/liputan_media' className={`text-uppercase btn btn-secondary ${activeClass === 'liputan_media' ? 'active' : ''}`}>
                                         Liputan Media
                                     </Link>
 
-                                    <Link href='/news/promo' className={`text-uppercase btn btn-secondary ${activeClass === 'wrx' ? 'active' : ''}`}>
+                                    <Link href='/news/promo' className={`text-uppercase btn btn-secondary ${activeClass === 'promo' ? 'active' : ''}`}>
                                         Promo
                                     </Link>
 
-                                    <Link href='/news/tips' className={`text-uppercase btn btn-secondary ${activeClass === 'wrx_wagon' ? 'active' : ''}`}>
+                                    <Link href='/news/tips' className={`text-uppercase btn btn-secondary ${activeClass === 'tips' ? 'active' : ''}`}>
                                         Tips
+                                    </Link>
+
+                                    <Link href='/news/all' className={`text-uppercase btn btn-secondary ${activeClass === 'all' ? 'active' : ''}`}>
+                                        Semua
                                     </Link>
                                 </ButtonGroup>
                             </section>
